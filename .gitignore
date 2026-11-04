@@ -1,0 +1,23 @@
+# Local working files, environments and caches
+[Cc][Oo][Dd][Ee][Xx]工作文件/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.venv*/
+venv/
+.env
+.env.*
+!.env.example
+*.log
+~$*
+.DS_Store
+Thumbs.db
+
+# Generated outputs (published input spreadsheets remain tracked)
+/results/
+dependence_pictures/
+interactions_pictures/
+shap_individual_plots_real_cost/
+shap_butterfly_final_custom_color.png
