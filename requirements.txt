@@ -1,0 +1,10 @@
+# Data-reading environment: Python 3.11
+# CSV/Excel loading and tabular processing
+pandas==2.3.3
+# Excel .xlsx support for pandas
+openpyxl==3.1.5
+
+# Optimization: install optimization/requirements.txt in its Python 3.11 environment.
+# Gurobi requires a valid license.
+# XGBoost/SHAP: install xgboost-shap/requirements.txt in its Python 3.9 environment.
+# Each module has its own pinned dependency versions and environment.
