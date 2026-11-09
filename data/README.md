@@ -74,6 +74,6 @@ assert all(len(table) == 8760 for table in (pv_hourly, building_hourly, ev_hourl
 
 ## Using the data with the models
 
-For optimization, organize the hourly load, PV generation, electricity tariffs, and PV capacity data according to the [optimization input format](../optimization/README.md#data-requirements), then set the file paths and parameters in `optimization/config.py`.
+For optimization, combine the supplied profiles and site attributes with the study's PV system parameters and local electricity tariffs. See the [optimization data requirements](../optimization/README.md#data-requirements).
 
-For XGBoost and SHAP analysis, select the predictor variables and numeric target for the research question, then configure the input table and target column as described in the [analysis module](../xgboost-shap/README.md#configuration).
+For XGBoost and SHAP analysis, select the predictor variables and numeric target for the research question as described in the [analysis data requirements](../xgboost-shap/README.md#data-requirements).
