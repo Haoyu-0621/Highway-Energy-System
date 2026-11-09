@@ -72,15 +72,8 @@ assert len(annual) == 3094
 assert all(len(table) == 8760 for table in (pv_hourly, building_hourly, ev_hourly))
 ```
 
-## Model-ready inputs
+## Using the data with the models
 
-The optimization loader expects four configured workbooks:
+For optimization, organize the hourly load, PV generation, electricity tariffs, and PV capacity data according to the [optimization input format](../optimization/README.md#data-requirements), then set the file paths and parameters in `optimization/config.py`.
 
-- Total hourly load: first column is an index; remaining columns are service-area names.
-- Hourly PV generation: first column is an index; service-area columns must match the load table.
-- Electricity prices: one worksheet per city, a header row, then 12 month rows; first column is the month and the next 24 columns are hourly prices.
-- PV capacity: first column is the service-area name; include `City`, `System Capacity`, `Carport Ratio`, and `Roof Ratio` columns. Longitude and latitude, when used, occupy the second and third columns. Ratios are fractional values.
-
-XGBoost requires a numeric target column and predictor columns in a CSV or Excel table. Set the target explicitly in the script. The complete training table, preprocessing mapping, and four model-ready workbooks are not separately identified in this supporting dataset.
-
-Prepare compatible inputs and update the configuration; do not rename an arbitrary supporting workbook to a placeholder name and assume it matches the required schema. The suggested `processed/` directory is a convention for future model-ready inputs, not a claim that these files are already supplied.
+For XGBoost and SHAP analysis, select the predictor variables and numeric target for the research question, then configure the input table and target column as described in the [analysis module](../xgboost-shap/README.md#configuration).
