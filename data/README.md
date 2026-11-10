@@ -3,7 +3,7 @@
 ## Dataset scope
 
 - `data1/service_area_data.csv` provides **3,094 annual service-area summary records**, with one row per service area and 11 columns.
-- `data1/tunnel_data.csv` provides **6,243 tunnel records**, including tunnel length, province, associated service area, and distance to that service area.
+- `data1/tunnel_data.csv` covers **5,804 distinct tunnel names** in the source dataset across **6,243 province-specific records**, including tunnel length, province, associated service area, and distance to that service area.
 - The 8760-hour profiles in `data2/` cover **seven selected typical service areas, one per major region of China**. Each typical site has **8,760 observations at 1-hour resolution** for a 365-day year.
 - `data2/` also contains tunnel information and separate 24-hour load tables. See also [the original description](data2/readme.txt).
 
@@ -83,6 +83,8 @@ File `data1/service_area_data.csv` is a comma-separated UTF-8 table with a heade
 `Region` contains East China, North China, Northeast China, Central China, South China, Southwest China, and Northwest China. The tunnel field records tunnel electricity consumption.
 
 ### Tunnel data
+
+The count of **5,804** is based on distinct tunnel names in the original Chinese dataset. Identically named tunnels in different provinces have separate records, giving **6,243 records** in the CSV.
 
 `data1/tunnel_data.csv` contains five fields — `Tunnel Name`, `Tunnel Length (m)`, `Province`, `Service Area Name`, and `Distance to Service Area (m)`. Length and distance are in metres. The service-area names follow the supplied dataset. Place names use romanized Chinese, and provinces use English names.
 

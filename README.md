@@ -25,7 +25,7 @@ Highway-Energy-System/
 
 `data/data1/service_area_data.csv` contains **3,094 annual service-area records**, including longitude, latitude, province, region, PV installation area, installed PV capacity, annual PV generation, and annual building, EV charging, and tunnel electricity consumption.
 
-`data/data1/tunnel_data.csv` contains **6,243 tunnel records** with tunnel lengths, provinces, associated service areas, and distances to those service areas, using English labels and romanized place names.
+`data/data1/tunnel_data.csv` covers **5,804 distinct tunnel names** in the source dataset across **6,243 province-specific records**, with tunnel lengths, provinces, associated service areas, and distances to those service areas. Labels are in English and place names are romanized.
 
 The hourly profiles in `data/data2/` cover **seven selected typical service areas, one from each of China's seven major regions**. Each typical site has **8,760 observations at 1-hour resolution** for PV generation, building load, and EV charging load. The directory also includes site and PV installation areas, tunnel attributes, and supporting 24-hour load profiles.
 
